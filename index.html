@@ -3,27 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harita Avı - KPSS Hazırlık</title>
+    <title>Harita Avı - KPSS Hazırlıkta Yeni Nesil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/double/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; text-align: center; margin: 0; padding: 50px 20px; }
-        .container { max-width: 600px; margin: auto; background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 20px; backdrop-filter: blur(10px); }
-        h1 { font-size: 3em; margin-bottom: 10px; }
-        p { font-size: 1.2em; line-height: 1.6; opacity: 0.9; }
-        .btn { display: inline-block; background: #ffcc00; color: #1e3c72; padding: 15px 30px; margin-top: 20px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1em; transition: 0.3s; }
-        .btn:hover { background: #fff; transform: scale(1.05); }
-        .footer { margin-top: 50px; font-size: 0.8em; opacity: 0.6; }
-        .footer a { color: white; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 2px; }
-        .footer a:hover { color: #ffcc00; border-color: #ffcc00; }
+        :root { --primary: #ffcc00; --secondary: #1e3c72; --accent: #2a5298; --text-white: #ffffff; }
+        body { font-family: 'Poppins', sans-serif; background: #0f172a; color: var(--text-white); margin: 0; padding: 0; overflow-x: hidden; }
+        .hero { background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%); padding: 100px 20px; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); }
+        .hero h1 { font-size: 3.5em; margin: 0; letter-spacing: -2px; animation: slideUp 1s ease; }
+        .hero p { font-size: 1.2em; opacity: 0.9; margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 80px 20px; max-width: 1200px; margin: auto; }
+        .card { background: rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); transition: 0.4s; text-align: center; }
+        .card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.1); border-color: var(--primary); }
+        .card i { font-size: 3em; color: var(--primary); margin-bottom: 20px; }
+        
+        .btn-main { display: inline-block; background: var(--primary); color: var(--secondary); padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.2em; margin-top: 40px; box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3); transition: 0.3s; }
+        .btn-main:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(255, 204, 0, 0.5); background: #fff; }
+
+        .footer { padding: 50px 20px; text-align: center; opacity: 0.7; font-size: 0.9em; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
+
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
-    <div class="container">
+
+    <section class="hero">
         <h1>📍 Harita Avı</h1>
-        <p>KPSS hazırlık sürecinde harita bilgisini eğlenerek öğrenin! Şehirler, göller, dağlar ve daha fazlası artık avucunuzun içinde.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.burhancengizbc.harita_avi" class="btn">Google Play'den İndir</a>
-    </div>
+        <p>KPSS hazırlığında haritalar artık sıkıcı değil! Şehirlerden dağlara, göllerden tarihi yerlere kadar her şeyi eğlenerek keşfedin.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.burhancengizbc.harita_avi" class="btn-main">Hemen Ücretsiz İndir</a>
+    </section>
+
+    <section class="features">
+        <div class="card">
+            <i>🗺️</i>
+            <h3>Detaylı Atlas</h3>
+            <p>Türkiye'nin her köşesini kapsayan, en güncel verilerle hazırlanmış interaktif haritalar.</p>
+        </div>
+        <div class="card">
+            <i>🎮</i>
+            <h3>Eğlenceli Modlar</h3>
+            <p>Zamana karşı yarışın veya kilitli bölümleri reklam izleyerek ücretsiz açın!</p>
+        </div>
+        <div class="card">
+            <i>📱</i>
+            <h3>Çevrimdışı Kullanım</h3>
+            <p>İnternetiniz olmasa bile harita bilginizi her yerde tazelemeye devam edin.</p>
+        </div>
+    </section>
+
     <div class="footer">
-        © 2026 <a href="https://instagram.com/burhancengizbc" target="_blank">Burhan Cengiz</a> | <a href="privacy-policy.html">Gizlilik Politikası</a>
+        © 2026 Tüm Hakları Saklıdır. <br>
+        Tasarım ve Geliştirme: <a href="https://instagram.com/burhancengizbc" target="_blank">Burhan Cengiz</a> <br><br>
+        <a href="privacy-policy.html">Gizlilik Politikası</a>
     </div>
+
 </body>
 </html>
