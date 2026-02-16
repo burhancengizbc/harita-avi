@@ -1,30 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gizlilik Politikası - Harita Avı</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: auto; padding: 40px 20px; }
-        h1 { color: #1e3c72; }
-        h2 { color: #2a5298; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; margin: 0; padding: 40px 20px; display: flex; justify-content: center; }
+        .container { max-width: 800px; background: rgba(255, 255, 255, 0.1); padding: 40px; border-radius: 20px; backdrop-filter: blur(15px); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); border: 1px solid rgba(255, 255, 255, 0.18); }
+        h1 { font-size: 2.5em; border-bottom: 2px solid #ffcc00; padding-bottom: 10px; margin-bottom: 30px; color: #ffcc00; }
+        h2 { color: #ffcc00; margin-top: 25px; font-size: 1.5em; }
+        p { font-size: 1.1em; line-height: 1.8; opacity: 0.95; }
+        ul { margin-bottom: 20px; }
+        li { margin-bottom: 10px; font-size: 1.05em; }
+        .btn-back { display: inline-block; background: #ffcc00; color: #1e3c72; padding: 12px 25px; margin-top: 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .btn-back:hover { background: white; transform: scale(1.05); }
     </style>
 </head>
 <body>
-    <h1>Gizlilik Politikası</h1>
-    <p>Son Güncelleme: 16 Şubat 2026</p>
-    
-    <p>Harita Avı ("biz", "uygulamamız"), kullanıcı gizliliğine önem verir. Bu metin, hangi verileri nasıl kullandığımızı açıklar.</p>
+    <div class="container">
+        <h1>⚖️ Gizlilik Politikası</h1>
+        <p><strong>Harita Avı</strong> uygulaması olarak kişisel verilerinizin güvenliği bizim için önceliktir. Bu metin, uygulamamızı kullanırken hangi verilerin işlendiğini şeffaf bir şekilde açıklar.</p>
 
-    <h2>1. Toplanan Veriler</h2>
-    <p>Uygulamamız doğrudan kişisel verilerinizi (ad, soyad, e-posta) toplamaz. Ancak, reklam hizmeti sunabilmek için üçüncü taraf servisler (Google AdMob) cihaz kimliği gibi anonim verileri toplayabilir.</p>
+        <h2>1. Veri Toplama ve Kullanım</h2>
+        <p>Uygulamamız doğrudan kullanıcıdan isim, e-posta veya telefon numarası gibi kişisel bilgiler talep etmez. Uygulama içindeki ilerlemeniz cihazınızda yerel olarak saklanır.</p>
 
-    <h2>2. Reklamlar</h2>
-    <p>Uygulamamızda Google AdMob üzerinden reklamlar gösterilmektedir. Bu reklamlar, ilgi alanlarınıza göre kişiselleştirilebilir.</p>
+        <h2>2. Üçüncü Taraf Hizmetler</h2>
+        <p>Uygulamayı ücretsiz sunabilmek amacıyla <strong>Google AdMob</strong> reklam servislerini kullanıyoruz. Bu servisler reklam sunumu için şunları toplayabilir:</p>
+        <ul>
+            <li>Cihaz reklam kimliği (IDFA/AAID)</li>
+            <li>Anonim kullanım istatistikleri</li>
+            <li>Konum verisi (yalnızca reklam optimizasyonu için anonim olarak)</li>
+        </ul>
 
-    <h2>3. İletişim</h2>
-    <p>Herhangi bir sorunuz olursa bizimle iletişime geçebilirsiniz.</p>
-    
-    <a href="index.html">Ana Sayfaya Dön</a>
+        <h2>3. Çerezler ve Güvenlik</h2>
+        <p>Reklam sağlayıcılar, size daha alakalı reklamlar göstermek için teknolojik tanımlayıcılar kullanabilir. Verileriniz asla üçüncü taraflara satılmaz.</p>
+
+        <h2>4. İletişim</h2>
+        <p>Gizlilik politikamız hakkında sorularınız için bizimle her zaman iletişime geçebilirsiniz.</p>
+
+        <a href="index.html" class="btn-back">⬅ Ana Sayfaya Dön</a>
+    </div>
 </body>
 </html>
