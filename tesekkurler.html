@@ -7,8 +7,8 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: #1a1a2e; /* Antrasit/Koyu Arka Plan */
+            color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,53 +17,72 @@
             text-align: center;
         }
         .container {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            max-width: 500px;
+            background: #16213e; /* Kart rengi */
+            padding: 50px 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 450px;
+            border: 2px solid #e94560; /* Turuncu/Kırmızı Accent */
         }
         h1 {
-            color: #2c3e50;
+            color: #e94560; /* Uygulama vurgu rengi */
             margin-bottom: 20px;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .icon {
-            font-size: 50px;
-            color: #27ae60;
-            margin-bottom: 20px;
+            font-size: 64px;
+            color: #4ee44e; /* Başarı yeşili */
+            margin-bottom: 25px;
+            filter: drop-shadow(0 0 10px rgba(78, 228, 78, 0.4));
         }
         p {
-            line-height: 1.6;
-            font-size: 18px;
+            line-height: 1.7;
+            font-size: 17px;
+            color: #d1d1d1;
         }
-        .footer {
-            margin-top: 30px;
-            font-size: 14px;
-            color: #7f8c8d;
+        strong {
+            color: #ffffff;
         }
         .btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 25px;
-            background-color: #3498db;
+            margin-top: 30px;
+            padding: 12px 35px;
+            background-color: #e94560;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 50px;
             font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+        }
+        .btn:hover {
+            background-color: #ff5e78;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233, 69, 96, 0.5);
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 13px;
+            color: #6a6a8a;
+            border-top: 1px solid #2d3436;
+            padding-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="icon">✅</div>
-        <h1>İşlem Başarılı!</h1>
-        <p><strong>Harita Avı (KPSS Coğrafya)</strong> uygulamasına verdiğiniz destek için teşekkür ederiz.</p>
-        <p>Satın alma işleminiz başarıyla tamamlanmıştır. Satın aldığınız özellikler uygulamanızda anında aktif edilmiştir.</p>
+        <div class="icon">🚀</div>
+        <h1>TEŞEKKÜR EDERİZ!</h1>
+        <p><strong>Harita Avı (KPSS Coğrafya)</strong> topluluğuna hoş geldiniz.</p>
+        <p>Satın alma işleminiz başarıyla tamamlandı. Kilidini açtığınız tüm içerikler şu an uygulamanızda sizi bekliyor.</p>
         
-        <a href="https://burhancengizbc.github.io/harita-avi/" class="btn">Ana Sayfaya Dön</a>
+        <a href="https://burhancengizbc.github.io/harita-avi/" class="btn">Macera Devam Ediyor</a>
 
         <div class="footer">
-            Sorularınız için: haritaavi@gmail.com
+            Destek ve Sorularınız için:<br>
+            <strong>haritaavi@gmail.com</strong>
         </div>
     </div>
 </body>
