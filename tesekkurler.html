@@ -3,86 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teşekkür Ederiz | Harita Avı</title>
+    <title>İşlem Başarılı | Harita Avı</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1a2e; /* Antrasit/Koyu Arka Plan */
-            color: #ffffff;
+            background-color: #f0f2f5; /* Dış arka plan */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            text-align: center;
+        }
+        .outer-card {
+            background: #fbc531; /* Altın sarısı dış çerçeve */
+            padding: 8px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
         .container {
-            background: #16213e; /* Kart rengi */
-            padding: 50px 40px;
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: #2c3e50; /* Görseldeki koyu lacivert tonu */
+            color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
             max-width: 450px;
-            border: 2px solid #e94560; /* Turuncu/Kırmızı Accent */
+            text-align: left;
+            border: 2px solid #34495e;
+        }
+        .header-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .icon-check {
+            width: 50px;
+            height: 50px;
+            background: #27ae60;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            margin-right: 20px;
+            border: 3px solid #2ecc71;
         }
         h1 {
-            color: #e94560; /* Uygulama vurgu rengi */
-            margin-bottom: 20px;
-            font-size: 28px;
+            color: #fbc531; /* Başlık sarı */
+            margin: 0;
+            font-size: 24px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        .icon {
-            font-size: 64px;
-            color: #4ee44e; /* Başarı yeşili */
-            margin-bottom: 25px;
-            filter: drop-shadow(0 0 10px rgba(78, 228, 78, 0.4));
+        .content {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
         }
         p {
-            line-height: 1.7;
-            font-size: 17px;
-            color: #d1d1d1;
+            line-height: 1.6;
+            font-size: 16px;
+            color: #ecf0f1;
+            margin-bottom: 15px;
         }
-        strong {
-            color: #ffffff;
+        .bullet {
+            color: #fbc531;
+            margin-right: 8px;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 30px;
         }
         .btn {
             display: inline-block;
-            margin-top: 30px;
-            padding: 12px 35px;
-            background-color: #e94560;
-            color: white;
+            padding: 12px 30px;
+            background-color: #fbc531;
+            color: #2c3e50;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 8px;
             font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+            transition: 0.3s;
         }
         .btn:hover {
-            background-color: #ff5e78;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(233, 69, 96, 0.5);
+            background-color: #e1b12c;
+            transform: scale(1.05);
         }
         .footer {
-            margin-top: 40px;
-            font-size: 13px;
-            color: #6a6a8a;
-            border-top: 1px solid #2d3436;
+            margin-top: 30px;
             padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+        }
+        .footer strong {
+            color: #fbc531;
+        }
+        .mail-link {
+            color: #ffffff;
+            text-decoration: underline;
+            margin-top: 5px;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="icon">🚀</div>
-        <h1>TEŞEKKÜR EDERİZ!</h1>
-        <p><strong>Harita Avı (KPSS Coğrafya)</strong> topluluğuna hoş geldiniz.</p>
-        <p>Satın alma işleminiz başarıyla tamamlandı. Kilidini açtığınız tüm içerikler şu an uygulamanızda sizi bekliyor.</p>
-        
-        <a href="https://burhancengizbc.github.io/harita-avi/" class="btn">Macera Devam Ediyor</a>
+    <div class="outer-card">
+        <div class="container">
+            <div class="header-row">
+                <div class="icon-check">✓</div>
+                <h1>İşlem Başarılı!</h1>
+            </div>
+            
+            <div class="content">
+                <p><span class="bullet">●</span> <strong>Harita Avı (KPSS Coğrafya)</strong> uygulamasına verdiğiniz destek için teşekkür ederiz.</p>
+                <p>Satın alma işleminiz başarıyla tamamlandı. Kilidini açtığınız tüm içerikler artık uygulamanızda aktif durumdadır.</p>
+            </div>
 
-        <div class="footer">
-            Destek ve Sorularınız için:<br>
-            <strong>haritaavi@gmail.com</strong>
+            <div class="btn-container">
+                <a href="https://burhancengizbc.github.io/harita-avi/" class="btn">Ana Sayfaya Dön</a>
+            </div>
+
+            <div class="footer">
+                <strong>Destek ve Sorularınız için:</strong>
+                <span class="mail-link">haritaavi@gmail.com</span>
+            </div>
         </div>
     </div>
 </body>
