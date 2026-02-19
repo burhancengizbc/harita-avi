@@ -11,14 +11,28 @@
     <style>
         :root { --primary: #ffcc00; --secondary: #1e3c72; --accent: #2a5298; --text-white: #ffffff; }
         body { font-family: 'Poppins', sans-serif; background: #0f172a; color: var(--text-white); margin: 0; padding: 0; overflow-x: hidden; }
-        .hero { background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%); padding: 100px 20px; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); }
-        .hero h1 { font-size: 3.5em; margin: 0; letter-spacing: -2px; animation: slideUp 1s ease; }
-        .hero p { font-size: 1.2em; opacity: 0.9; margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto; }
         
-        /* Logo Header Stili */
-        .logo-header { text-align: center; padding: 20px 0; background: #1e3c72; }
-        .logo-header img { max-width: 120px; height: auto; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        /* Kahraman Alanı Düzenlemesi */
+        .hero { 
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%); 
+            padding: 80px 20px 120px 20px; 
+            text-align: center; 
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); 
+        }
 
+        /* Hero İçindeki Logo Stili */
+        .hero-logo {
+            max-width: 140px;
+            height: auto;
+            border-radius: 20%; /* Uygulama ikonu gibi hafif yuvarlak */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            margin-bottom: 25px;
+            animation: slideUp 0.8s ease;
+        }
+
+        .hero h1 { font-size: 3.5em; margin: 10px 0; letter-spacing: -2px; animation: slideUp 1s ease; }
+        .hero p { font-size: 1.2em; opacity: 0.9; margin-top: 15px; max-width: 650px; margin-left: auto; margin-right: auto; }
+        
         .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 80px 20px; max-width: 1200px; margin: auto; }
         .card { background: rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); transition: 0.4s; text-align: center; }
         .card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.1); border-color: var(--primary); }
@@ -35,12 +49,10 @@
 </head>
 <body>
 
-    <div class="logo-header">
-        <img src="logo.png" alt="Harita Avı Logo">
-    </div>
-
     <section class="hero">
-        <h1>📍 Harita Avı</h1>
+        <img src="logo.png" alt="Harita Avı Logo" class="hero-logo">
+        
+        <h1>Harita Avı</h1>
         <p>KPSS hazırlığında haritalar artık sıkıcı değil! Şehirlerden dağlara, göllerden tarihi yerlere kadar her şeyi eğlenerek keşfedin.</p>
         <a href="https://play.google.com/store/apps/details?id=com.burhan.kpss_cografya&hl=en-US&ah=IkMNWyl_66BtRRsYs7d3clZCHFM&pli=1" class="btn-main">Hemen Ücretsiz İndir</a>
     </section>
