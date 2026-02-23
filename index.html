@@ -7,7 +7,7 @@
     
     <link rel="icon" type="image/png" sizes="64x64" href="logo64x64x.png">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/double/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --primary: #ffcc00; --secondary: #1e3c72; --accent: #2a5298; --text-white: #ffffff; }
         body { font-family: 'Poppins', sans-serif; background: #0f172a; color: var(--text-white); margin: 0; padding: 0; overflow-x: hidden; }
@@ -24,7 +24,7 @@
         .hero-logo {
             max-width: 140px;
             height: auto;
-            border-radius: 20%; /* Uygulama ikonu gibi hafif yuvarlak */
+            border-radius: 20%; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
             margin-bottom: 25px;
             animation: slideUp 0.8s ease;
@@ -33,14 +33,40 @@
         .hero h1 { font-size: 3.5em; margin: 10px 0; letter-spacing: -2px; animation: slideUp 1s ease; }
         .hero p { font-size: 1.2em; opacity: 0.9; margin-top: 15px; max-width: 650px; margin-left: auto; margin-right: auto; }
         
+        /* 📱 QR VE BUTON WRAPPER (Yeni Eklendi) */
+        .download-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            animation: slideUp 1.2s ease;
+        }
+        .download-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .qr-img {
+            width: 130px;
+            height: 130px;
+            background: white;
+            padding: 8px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+        .qr-img:hover { transform: scale(1.05); }
+
+        .btn-main { display: inline-block; background: var(--primary); color: var(--secondary); padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.1em; box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3); transition: 0.3s; }
+        .btn-main:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(255, 204, 0, 0.5); background: #fff; }
+
         .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 80px 20px; max-width: 1200px; margin: auto; }
         .card { background: rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); transition: 0.4s; text-align: center; }
         .card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.1); border-color: var(--primary); }
         .card i { font-size: 3em; color: var(--primary); margin-bottom: 20px; }
         
-        .btn-main { display: inline-block; background: var(--primary); color: var(--secondary); padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.2em; margin-top: 40px; box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3); transition: 0.3s; }
-        .btn-main:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(255, 204, 0, 0.5); background: #fff; }
-
         .footer { padding: 50px 20px; text-align: center; opacity: 0.7; font-size: 0.9em; border-top: 1px solid rgba(255,255,255,0.1); }
         .footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
 
@@ -54,7 +80,18 @@
         
         <h1>Harita Avı</h1>
         <p>TYT, AYT, KPSS ve benzeri sınavların hazırlıklarında haritalar artık sıkıcı değil! Şehirlerden dağlara, göllerden tarihi yerlere kadar her şeyi eğlenerek keşfedin.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.burhan.kpss_cografya&hl=en-US&ah=IkMNWyl_66BtRRsYs7d3clZCHFM&pli=1" class="btn-main">Hemen Ücretsiz İndir</a>
+        
+        <div class="download-container">
+            <div class="download-box">
+                <img src="googleplayqr.png" alt="Google Play QR" class="qr-img">
+                <a href="https://play.google.com/store/apps/details?id=com.burhan.kpss_cografya" class="btn-main">Google Play</a>
+            </div>
+
+            <div class="download-box">
+                <img src="appstoreqr.png" alt="App Store QR" class="qr-img">
+                <a href="https://www.instagram.com/burhancengizbc" class="btn-main" style="background: white; color: black;">App Store</a>
+            </div>
+        </div>
     </section>
 
     <section class="features">
