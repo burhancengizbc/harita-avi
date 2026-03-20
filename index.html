@@ -22,7 +22,7 @@
         }
         body { font-family: 'Poppins', sans-serif; background: #0f172a; color: var(--text-white); margin: 0; padding: 0; overflow-x: hidden; }
         
-        /* Kahraman Alanı Düzenlemesi */
+        /* Kahraman Alanı */
         .hero { 
             background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%); 
             padding: 80px 20px 120px 20px; 
@@ -30,7 +30,6 @@
             clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); 
         }
 
-        /* Hero İçindeki Logo Stili */
         .hero-logo {
             max-width: 140px;
             height: auto;
@@ -43,7 +42,7 @@
         .hero h1 { font-size: 3.5em; margin: 10px 0; letter-spacing: -2px; animation: slideUp 1s ease; }
         .hero p { font-size: 1.2em; opacity: 0.9; margin-top: 15px; max-width: 650px; margin-left: auto; margin-right: auto; }
         
-        /* 📱 QR VE BUTON WRAPPER */
+        /* İndirme Alanı */
         .download-container {
             display: flex;
             justify-content: center;
@@ -77,12 +76,19 @@
         .card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.1); border-color: var(--primary); }
         .card i { font-size: 3em; color: var(--primary); margin-bottom: 20px; }
         
-        /* Footer Stilleri */
+        /* Footer Tasarımı */
         footer { 
             padding: 60px 20px; 
             text-align: center; 
             border-top: 1px solid rgba(255,255,255,0.1);
             background: rgba(0,0,0,0.2);
+        }
+
+        .footer-logo {
+            width: 60px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
         }
 
         .contact-title {
@@ -95,7 +101,7 @@
         }
 
         .social-links {
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
             display: flex;
             justify-content: center;
             gap: 25px;
@@ -117,13 +123,29 @@
 
         .footer-text {
             font-size: 0.95rem;
-            line-height: 1.8;
-            opacity: 0.8;
+            line-height: 1.6;
+            opacity: 0.9;
         }
 
-        .footer-text p { margin: 5px 0; }
-        .footer-text a { color: var(--primary); text-decoration: none; font-weight: 600; }
-        .footer-text a:hover { text-decoration: underline; }
+        .footer-text p { margin: 8px 0; }
+        
+        /* Tıklanabilir Linklerin Sabit Beyaz Kalması İçin */
+        .footer-text a { 
+            color: var(--text-white) !important; 
+            text-decoration: none; 
+            font-weight: 600; 
+            transition: opacity 0.3s;
+        }
+
+        .footer-text a.privacy-link { 
+            opacity: 0.6; 
+            font-weight: 400; 
+        }
+
+        .footer-text a:hover { 
+            opacity: 1; 
+            text-decoration: underline !important; 
+        }
 
         @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
     </style>
@@ -168,6 +190,7 @@
     </section>
 
 <footer>
+    <img src="bclogo.png" alt="BC Logo" class="footer-logo">
     <div class="contact-title">İletişim:</div>
     <div class="social-links">
         <a href="mailto:burhancengizbc@hotmail.com" title="E-Posta Gönder" class="mail">
@@ -184,9 +207,9 @@
         </a>
     </div>
     <div class="footer-text">
-        <p>JavaScript | <a href="https://burhancengiz.com" target="_blank">burhancengiz.com</a></p>
+        <p>JavaScript | &copy; 2026 <a href="https://burhancengiz.com" target="_blank">burhancengiz.com</a></p>
         <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
-        <a href="privacy-policy.html">Gizlilik Politikası</a>
+        <p><a href="/privacy-policy.html" class="privacy-link">Gizlilik Politikası</a></p>
     </div>
 </footer>
 
