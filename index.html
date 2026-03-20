@@ -84,13 +84,6 @@
             background: rgba(0,0,0,0.2);
         }
 
-        .footer-logo {
-            width: 60px;
-            height: auto;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
-        }
-
         .contact-title {
             font-weight: 700;
             font-size: 1.2rem;
@@ -128,24 +121,9 @@
         }
 
         .footer-text p { margin: 8px 0; }
-        
-        /* Tıklanabilir Linklerin Sabit Beyaz Kalması İçin */
-        .footer-text a { 
-            color: var(--text-white) !important; 
-            text-decoration: none; 
-            font-weight: 600; 
-            transition: opacity 0.3s;
-        }
-
-        .footer-text a.privacy-link { 
-            opacity: 0.6; 
-            font-weight: 400; 
-        }
-
-        .footer-text a:hover { 
-            opacity: 1; 
-            text-decoration: underline !important; 
-        }
+        .footer-text a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .footer-text a.privacy-link { opacity: 0.6; font-weight: 400; color: var(--text-white); }
+        .footer-text a:hover { opacity: 1; text-decoration: underline; }
 
         @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
     </style>
@@ -190,7 +168,6 @@
     </section>
 
 <footer>
-    <img src="bclogo.png" alt="BC Logo" class="footer-logo">
     <div class="contact-title">İletişim:</div>
     <div class="social-links">
         <a href="mailto:burhancengizbc@hotmail.com" title="E-Posta Gönder" class="mail">
@@ -209,7 +186,7 @@
     <div class="footer-text">
         <p>JavaScript | &copy; 2026 <a href="https://burhancengiz.com" target="_blank">burhancengiz.com</a></p>
         <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
-        <p><a href="/privacy-policy.html" class="privacy-link">Gizlilik Politikası</a></p>
+        <a href="/privacy-policy.html" class="privacy-link">Gizlilik Politikası</a>
     </div>
 </footer>
 
