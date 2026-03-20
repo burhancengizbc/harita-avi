@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burhan Cengiz | Yazılım Geliştirici</title>
+    
+    <link rel="icon" type="image/png" href="burhance.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -14,7 +17,6 @@
             --accent-color: #58a6ff;
             --secondary-color: #30363d;
             
-            /* Sosyal Medya Renkleri */
             --fb-color: #1877F2;
             --ig-color: #E4405F;
             --tt-color: #ff0050;
@@ -40,6 +42,14 @@
             border-bottom: 1px solid var(--secondary-color);
             text-align: center;
             padding: 0 1rem;
+        }
+
+        /* ORİJİNAL BLUE COMPASS LOGOSU */
+        .site-logo {
+            width: 140px;
+            height: 140px;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 0 15px rgba(88, 166, 255, 0.3));
         }
 
         h1 {
@@ -132,13 +142,6 @@
             border-top: 1px solid var(--secondary-color);
         }
 
-        .footer-logo {
-            width: 60px;
-            height: auto;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
-        }
-
         .contact-title {
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.2rem;
@@ -172,16 +175,13 @@
             color: white;
         }
 
-        /* Linklerin Sabit Beyaz Kalması */
         .footer-text a {
             color: white !important;
             text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s;
+            font-weight: bold;
         }
 
         .footer-text a:hover {
-            opacity: 1;
             text-decoration: underline !important;
         }
 
@@ -197,12 +197,22 @@
             .typewriter { font-size: 1rem; }
             .social-links { gap: 15px; }
             .social-links a { font-size: 1.7rem; }
+            .site-logo { width: 100px; height: 100px; }
         }
     </style>
 </head>
 <body>
 
 <header>
+    <div class="site-logo">
+        <svg width="100%" height="100%" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="200" rx="40" fill="#161b22"/>
+            <text x="20" y="115" font-family="JetBrains Mono, monospace" font-size="50" font-weight="bold" fill="#58a6ff">&lt;</text>
+            <text x="145" y="115" font-family="JetBrains Mono, monospace" font-size="50" font-weight="bold" fill="#58a6ff">/&gt;</text>
+            <text x="65" y="115" font-family="Inter, sans-serif" font-size="55" font-weight="900" fill="#ffffff">BC</text>
+            <text x="50" y="160" font-family="JetBrains Mono, monospace" font-size="12" fill="#c9d1d9" opacity="0.8">  BLUE COMPASS</text>
+        </svg>
+    </div>
     <h1>Burhan CENGİZ</h1>
     <div class="typewriter">Yazılım Geliştirici & Girişimci;</div>
 </header>
@@ -215,7 +225,7 @@
 
     <h2 class="section-title">01. Projelerim</h2>
 
-    <a href="https://burhancengizbc.github.io/harita-avi/" class="project-card">
+    <a href="/harita-avi/" class="project-card">
         <div>
             <span class="tag">Web Uygulaması</span>
             <span class="tag">Eğitim</span>
@@ -227,7 +237,7 @@
 
     <a href="https://canlicanli.net/" class="project-card">
         <div>
-            <span class="tag">Gerçek Zamanlı Sohbet Sitesi</span>
+            <span class="tag">Gerçek Zamanlı Sohbet</span>
             <span class="tag">Web</span>
         </div>
         <h3>💬 Sohbet Uygulaması</h3>
@@ -237,7 +247,6 @@
 </div>
 
 <footer>
-    <img src="bclogo.png" alt="Burhan Cengiz Logo" class="footer-logo">
     <div class="contact-title">İletişim:</div>
     <div class="social-links">
         <a href="mailto:burhancengizbc@hotmail.com" title="E-Posta Gönder" class="mail">
