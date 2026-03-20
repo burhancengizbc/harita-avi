@@ -3,94 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harita Avı - TYT, AYT, KPSS Hazırlıkta Yeni Nesil</title>
-    
-    <link rel="icon" type="image/png" sizes="64x64" href="logo64x64x.png">
-    
+    <title>Burhan Cengiz | Yazılım Geliştirici</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { 
-            --primary: #ffcc00; 
-            --secondary: #1e3c72; 
-            --accent: #2a5298; 
-            --text-white: #ffffff; 
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-main: #c9d1d9;
+            --accent-color: #58a6ff;
+            --secondary-color: #30363d;
+            
             /* Sosyal Medya Renkleri */
             --fb-color: #1877F2;
             --ig-color: #E4405F;
             --tt-color: #ff0050;
             --mail-color: #00bcd4;
         }
-        body { font-family: 'Poppins', sans-serif; background: #0f172a; color: var(--text-white); margin: 0; padding: 0; overflow-x: hidden; }
-        
-        /* Kahraman Alanı */
-        .hero { 
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%); 
-            padding: 80px 20px 120px 20px; 
-            text-align: center; 
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); 
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        .hero-logo {
-            max-width: 140px;
-            height: auto;
-            border-radius: 20%; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-            margin-bottom: 25px;
-            animation: slideUp 0.8s ease;
-        }
-
-        .hero h1 { font-size: 3.5em; margin: 10px 0; letter-spacing: -2px; animation: slideUp 1s ease; }
-        .hero p { font-size: 1.2em; opacity: 0.9; margin-top: 15px; max-width: 650px; margin-left: auto; margin-right: auto; }
-        
-        /* İndirme Alanı */
-        .download-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-            animation: slideUp 1.2s ease;
-        }
-        .download-box {
+        header {
+            height: 70vh;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, #1e293b 0%, #0d1117 100%);
+            border-bottom: 1px solid var(--secondary-color);
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            color: white;
+            font-weight: 900;
+            letter-spacing: -2px;
+        }
+
+        .typewriter {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            border-right: 2px solid var(--accent-color);
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -50px auto 50px;
+            padding: 0 1.5rem;
+        }
+
+        .section-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: white;
+            display: flex;
             align-items: center;
         }
-        .qr-img {
-            width: 130px;
-            height: 130px;
-            background: white;
-            padding: 8px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            margin-bottom: 15px;
-            transition: 0.3s;
+
+        .section-title::after {
+            content: "";
+            height: 1px;
+            background: var(--secondary-color);
+            flex-grow: 1;
+            margin-left: 1rem;
         }
-        .qr-img:hover { transform: scale(1.05); }
 
-        .btn-main { display: inline-block; background: var(--primary); color: var(--secondary); padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.1em; box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3); transition: 0.3s; }
-        .btn-main:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(255, 204, 0, 0.5); background: #fff; }
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--secondary-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
 
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 80px 20px; max-width: 1200px; margin: auto; }
-        .card { background: rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); transition: 0.4s; text-align: center; }
-        .card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.1); border-color: var(--primary); }
-        .card i { font-size: 3em; color: var(--primary); margin-bottom: 20px; }
-        
-        /* Footer Tasarımı */
-        footer { 
-            padding: 60px 20px; 
-            text-align: center; 
-            border-top: 1px solid rgba(255,255,255,0.1);
-            background: rgba(0,0,0,0.2);
+        .project-card:hover {
+            transform: scale(1.02);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            background: rgba(88, 166, 255, 0.1);
+            color: var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+
+        .about-card {
+            background: #1c2128;
+            border-left: 4px solid var(--accent-color);
+            padding: 2rem;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 3rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 1rem;
+            border-top: 1px solid var(--secondary-color);
+        }
+
+        .footer-logo {
+            width: 60px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
         }
 
         .contact-title {
-            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
             font-size: 1.2rem;
-            color: var(--primary);
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: white;
+            margin-bottom: 20px;
         }
 
         .social-links {
@@ -103,71 +156,88 @@
         .social-links a {
             text-decoration: none;
             font-size: 2rem;
-            color: var(--text-white);
+            color: var(--text-main);
             transition: transform 0.3s ease, color 0.3s ease, filter 0.3s ease;
-            opacity: 0.8;
         }
 
-        .social-links a:hover { opacity: 1; transform: translateY(-5px); }
-        .social-links a.mail:hover { color: var(--mail-color); filter: drop-shadow(0 0 8px var(--mail-color)); }
-        .social-links a.facebook:hover { color: var(--fb-color); filter: drop-shadow(0 0 8px var(--fb-color)); }
-        .social-links a.instagram:hover { color: var(--ig-color); filter: drop-shadow(0 0 8px var(--ig-color)); }
-        .social-links a.tiktok:hover { color: var(--tt-color); filter: drop-shadow(0 0 8px var(--tt-color)); }
+        .social-links a.mail:hover { color: var(--mail-color); transform: translateY(-5px); filter: drop-shadow(0 0 8px var(--mail-color)); }
+        .social-links a.facebook:hover { color: var(--fb-color); transform: translateY(-5px); filter: drop-shadow(0 0 8px var(--fb-color)); }
+        .social-links a.instagram:hover { color: var(--ig-color); transform: translateY(-5px); filter: drop-shadow(0 0 8px var(--ig-color)); }
+        .social-links a.tiktok:hover { color: var(--tt-color); transform: translateY(-5px); filter: drop-shadow(0 0 8px var(--tt-color)); }
 
         .footer-text {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            opacity: 0.9;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            color: white;
         }
 
-        .footer-text p { margin: 8px 0; }
-        .footer-text a { color: var(--primary); text-decoration: none; font-weight: 600; }
-        .footer-text a.privacy-link { opacity: 0.6; font-weight: 400; color: var(--text-white); }
-        .footer-text a:hover { opacity: 1; text-decoration: underline; }
+        /* Linklerin Sabit Beyaz Kalması */
+        .footer-text a {
+            color: white !important;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
 
-        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .footer-text a:hover {
+            opacity: 1;
+            text-decoration: underline !important;
+        }
+
+        .footer-text p {
+            margin: 8px 0;
+        }
+
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--accent-color); } }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .typewriter { font-size: 1rem; }
+            .social-links { gap: 15px; }
+            .social-links a { font-size: 1.7rem; }
+        }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <img src="logo.png" alt="Harita Avı Logo" class="hero-logo">
-        
-        <h1>Harita Avı</h1>
-        <p>TYT, AYT, KPSS ve benzeri sınavların hazırlıklarında haritalar artık sıkıcı değil! Şehirlerden dağlara, göllerden tarihi yerlere kadar her şeyi eğlenerek keşfedin.</p>
-        
-        <div class="download-container">
-            <div class="download-box">
-                <img src="googleplayqr.png" alt="Google Play QR" class="qr-img">
-                <a href="https://play.google.com/store/apps/details?id=com.burhan.kpss_cografya" class="btn-main">Google Play</a>
-            </div>
+<header>
+    <h1>Burhan CENGİZ</h1>
+    <div class="typewriter">Yazılım Geliştirici & Girişimci;</div>
+</header>
 
-            <div class="download-box">
-                <img src="appstoreqr.png" alt="App Store QR" class="qr-img">
-                <a href="https://burhancengiz.com/harita-avi/" class="btn-main" style="background: white; color: black;">App Store(YAKINDA)</a>
-            </div>
-        </div>
-    </section>
+<div class="container">
+    <div class="about-card">
+        <h2 style="color: white; margin-top: 0; font-family: 'JetBrains Mono', monospace;">&gt; Hakkımda</h2>
+        <p>Merhaba, ben Burhan. Web ve mobil dünyasında kullanıcı odaklı, yüksek performanslı çözümler geliştirmeye odaklanıyorum. Karmaşık problemleri basit ve etkili kodlarla çözmeyi seviyorum.</p>
+    </div>
 
-    <section class="features">
-        <div class="card">
-            <i>🗺️</i>
-            <h3>Detaylı Atlas</h3>
-            <p>Türkiye'nin her köşesini kapsayan, en güncel verilerle hazırlanmış interaktif haritalar.</p>
+    <h2 class="section-title">01. Projelerim</h2>
+
+    <a href="https://burhancengizbc.github.io/harita-avi/" class="project-card">
+        <div>
+            <span class="tag">Web Uygulaması</span>
+            <span class="tag">Eğitim</span>
         </div>
-        <div class="card">
-            <i>🎮</i>
-            <h3>Eğlenceli Modlar</h3>
-            <p>Zamana karşı yarışın veya kilitli bölümleri reklam izleyerek ücretsiz açın!</p>
+        <h3>🌍 Harita Avı</h3>
+        <p>Sınav hazırlık sürecinde coğrafya ve harita bilgisini interaktif bir deneyime dönüştüren oyunlaştırılmış eğitim platformu.</p>
+        <div style="color: var(--accent-color); font-weight: bold; margin-top: 1rem;">Projeyi İncele →</div>
+    </a>
+
+    <a href="https://canlicanli.net/" class="project-card">
+        <div>
+            <span class="tag">Gerçek Zamanlı Sohbet Sitesi</span>
+            <span class="tag">Web</span>
         </div>
-        <div class="card">
-            <i>📱</i>
-            <h3>Çevrimdışı Kullanım</h3>
-            <p>İnternetiniz olmasa bile harita bilginizi her yerde tazelemeye devam edin.</p>
-        </div>
-    </section>
+        <h3>💬 Sohbet Uygulaması</h3>
+        <p>Anlık mesajlaşma altyapıları ve gerçek zamanlı veri iletişimi üzerine kurguladığım modern web çalışması.</p>
+        <div style="color: var(--accent-color); font-weight: bold; margin-top: 1rem;">Projeyi İncele →</div>
+    </a>
+</div>
 
 <footer>
+    <img src="bclogo.png" alt="Burhan Cengiz Logo" class="footer-logo">
     <div class="contact-title">İletişim:</div>
     <div class="social-links">
         <a href="mailto:burhancengizbc@hotmail.com" title="E-Posta Gönder" class="mail">
@@ -186,7 +256,7 @@
     <div class="footer-text">
         <p>JavaScript | &copy; 2026 <a href="https://burhancengiz.com" target="_blank">burhancengiz.com</a></p>
         <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
-        <a href="/privacy-policy.html" class="privacy-link">Gizlilik Politikası</a>
+        <p><a href="/privacy-policy.html">Gizlilik Politikası</a></p>
     </div>
 </footer>
 
