@@ -9,7 +9,17 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #ffcc00; --secondary: #1e3c72; --accent: #2a5298; --text-white: #ffffff; }
+        :root { 
+            --primary: #ffcc00; 
+            --secondary: #1e3c72; 
+            --accent: #2a5298; 
+            --text-white: #ffffff; 
+            /* Sosyal Medya Renkleri */
+            --fb-color: #1877F2;
+            --ig-color: #E4405F;
+            --tt-color: #ff0050;
+            --mail-color: #00bcd4;
+        }
         body { font-family: 'Poppins', sans-serif; background: #0f172a; color: var(--text-white); margin: 0; padding: 0; overflow-x: hidden; }
         
         /* Kahraman Alanı Düzenlemesi */
@@ -33,7 +43,7 @@
         .hero h1 { font-size: 3.5em; margin: 10px 0; letter-spacing: -2px; animation: slideUp 1s ease; }
         .hero p { font-size: 1.2em; opacity: 0.9; margin-top: 15px; max-width: 650px; margin-left: auto; margin-right: auto; }
         
-        /* 📱 QR VE BUTON WRAPPER (Yeni Eklendi) */
+        /* 📱 QR VE BUTON WRAPPER */
         .download-container {
             display: flex;
             justify-content: center;
@@ -67,8 +77,53 @@
         .card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.1); border-color: var(--primary); }
         .card i { font-size: 3em; color: var(--primary); margin-bottom: 20px; }
         
-        .footer { padding: 50px 20px; text-align: center; opacity: 0.7; font-size: 0.9em; border-top: 1px solid rgba(255,255,255,0.1); }
-        .footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        /* Yeni Footer Stilleri (Harita Avı Temasına Uygun) */
+        footer { 
+            padding: 60px 20px; 
+            text-align: center; 
+            border-top: 1px solid rgba(255,255,255,0.1);
+            background: rgba(0,0,0,0.2);
+        }
+
+        .contact-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .social-links {
+            margin-bottom: 2.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            font-size: 2rem;
+            color: var(--text-white);
+            transition: transform 0.3s ease, color 0.3s ease, filter 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .social-links a:hover { opacity: 1; transform: translateY(-5px); }
+        .social-links a.mail:hover { color: var(--mail-color); filter: drop-shadow(0 0 8px var(--mail-color)); }
+        .social-links a.facebook:hover { color: var(--fb-color); filter: drop-shadow(0 0 8px var(--fb-color)); }
+        .social-links a.instagram:hover { color: var(--ig-color); filter: drop-shadow(0 0 8px var(--ig-color)); }
+        .social-links a.tiktok:hover { color: var(--tt-color); filter: drop-shadow(0 0 8px var(--tt-color)); }
+
+        .footer-text {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            opacity: 0.8;
+        }
+
+        .footer-text p { margin: 5px 0; }
+        .footer-text a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .footer-text a:hover { text-decoration: underline; }
 
         @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
     </style>
@@ -112,11 +167,28 @@
         </div>
     </section>
 
-    <div class="footer">
-        © 2026 Tüm Hakları Saklıdır. <br>
-        Tasarım ve Geliştirme: <a href="https://instagram.com/burhancengizbc" target="_blank">Burhan Cengiz</a> <br><br>
+<footer>
+    <div class="contact-title">İletişim:</div>
+    <div class="social-links">
+        <a href="mailto:burhancengizbc@hotmail.com" title="E-Posta Gönder" class="mail">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.facebook.com/BurhanCengizBC/" target="_blank" title="Facebook" class="facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/burhancengizbc/" target="_blank" title="Instagram" class="instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@burhancengizbc" target="_blank" title="TikTok" class="tiktok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+    <div class="footer-text">
+        <p>JavaScript | &copy; 2026 burhancengiz.com</p>
+        <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
         <a href="privacy-policy.html">Gizlilik Politikası</a>
     </div>
+</footer>
 
 </body>
 </html>
