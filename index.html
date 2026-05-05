@@ -1,89 +1,239 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="utf-8"/>
-<title>Harita Avı — Reklam</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-<style>
-  body {
-    margin: 0; padding: 60px 40px;
-    background: #2D3A45;
-    color: #F4F1EA;
-    font-family: 'Inter', system-ui, sans-serif;
-    min-height: 100vh;
-    box-sizing: border-box;
-  }
-  .wrap { max-width: 980px; margin: 0 auto; }
-  h1 {
-    font-family: 'Bebas Neue', Impact, sans-serif;
-    font-size: 88px; letter-spacing: 0.04em;
-    margin: 0 0 8px;
-  }
-  .sub { color: #B8BFC6; font-size: 20px; margin-bottom: 60px; }
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-  .card {
-    background: #1F2A33;
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 22px;
-    padding: 32px;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: transform 200ms, border-color 200ms;
-  }
-  .card:hover { transform: translateY(-4px); border-color: #E54848; }
-  .label { font-size: 14px; letter-spacing: 0.2em; color: #E54848; font-weight: 700; }
-  .title { font-family: 'Bebas Neue', sans-serif; font-size: 56px; letter-spacing: 0.03em; margin: 12px 0 8px; }
-  .meta { font-size: 16px; color: #B8BFC6; }
-  .preview {
-    margin-top: 22px;
-    background: #2D3A45;
-    border-radius: 14px;
-    aspect-ratio: 9/16;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 64px;
-    color: #fff;
-    letter-spacing: 0.04em;
-  }
-  .card.horiz .preview { aspect-ratio: 16/9; }
-  .dash { width: 28px; height: 6px; background: #E54848; margin: 14px auto 0; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harita Avı - TYT, AYT, KPSS Hazırlıkta Yeni Nesil</title>
+    
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/burhancengizbc/harita-avi/main/logo.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { 
+            --primary: #ffcc00; 
+            --secondary: #1e3c72; 
+            --accent: #2a5298; 
+            --text-white: #ffffff; 
+            /* Sosyal Medya Renkleri */
+            --fb-color: #1877F2;
+            --ig-color: #E4405F;
+            --tt-color: #ff0050;
+            --mail-color: #00bcd4;
+        }
+        body { font-family: 'Poppins', sans-serif; background: #0f172a; color: var(--text-white); margin: 0; padding: 0; overflow-x: hidden; }
+        
+        /* Kahraman Alanı */
+        .hero { 
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%); 
+            padding: 80px 20px 120px 20px; 
+            text-align: center; 
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); 
+        }
+
+        .hero-logo {
+            max-width: 140px;
+            height: auto;
+            border-radius: 20%; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            margin-bottom: 25px;
+            animation: slideUp 0.8s ease;
+        }
+
+        .hero h1 { font-size: 3.5em; margin: 10px 0; letter-spacing: -2px; animation: slideUp 1s ease; }
+        .hero p { font-size: 1.2em; opacity: 0.9; margin-top: 15px; max-width: 650px; margin-left: auto; margin-right: auto; }
+        
+        /* İndirme Alanı */
+        .download-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            animation: slideUp 1.2s ease;
+        }
+        .download-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .qr-img {
+            width: 130px;
+            height: 130px;
+            background: white;
+            padding: 8px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+        .qr-img:hover { transform: scale(1.05); }
+
+        .btn-main { display: inline-block; background: var(--primary); color: var(--secondary); padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.1em; box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3); transition: 0.3s; }
+        .btn-main:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(255, 204, 0, 0.5); background: #fff; }
+
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 80px 20px; max-width: 1200px; margin: auto; }
+        .card { background: rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); transition: 0.4s; text-align: center; }
+        .card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.1); border-color: var(--primary); }
+        .card i { font-size: 3em; color: var(--primary); margin-bottom: 20px; }
+        
+        /* Footer Tasarımı */
+        footer { 
+            padding: 60px 20px; 
+            text-align: center; 
+            border-top: 1px solid rgba(255,255,255,0.1);
+            background: rgba(0,0,0,0.2);
+        }
+
+        .contact-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .social-links {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            font-size: 2rem;
+            color: var(--text-white);
+            transition: transform 0.3s ease, color 0.3s ease, filter 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .social-links a:hover { opacity: 1; transform: translateY(-5px); }
+        .social-links a.mail:hover { color: var(--mail-color); filter: drop-shadow(0 0 8px var(--mail-color)); }
+        .social-links a.facebook:hover { color: var(--fb-color); filter: drop-shadow(0 0 8px var(--fb-color)); }
+        .social-links a.instagram:hover { color: var(--ig-color); filter: drop-shadow(0 0 8px var(--ig-color)); }
+        .social-links a.tiktok:hover { color: var(--tt-color); filter: drop-shadow(0 0 8px var(--tt-color)); }
+
+        .footer-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .footer-text p { margin: 8px 0; }
+        
+        /* Linklerin Sabit Beyaz Kalması */
+        .footer-text a { 
+            color: var(--text-white) !important; 
+            text-decoration: none; 
+            font-weight: 600; 
+            transition: opacity 0.3s;
+        }
+
+        .footer-text a.privacy-link { opacity: 0.6; font-weight: 400; }
+        .footer-text a:hover { opacity: 1; text-decoration: underline !important; }
+
+        /* Reklam Iframe Stili */
+        #reklam-alani iframe {
+            display: block;
+            margin: 0 auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>HARİTA AVI <span style="color:#E54848">·</span> REKLAM</h1>
-  <div class="sub">30 saniyelik tanıtım videoları — iki format</div>
 
-  <div class="grid">
-    <a class="card" href="Harita Avi - Dikey.html">
-      <div class="label">9:16 · DİKEY</div>
-      <div class="title">TIKTOK · REELS · SHORTS · STORY</div>
-      <div class="meta">1080 × 1920 · 30s</div>
-      <div class="preview">
-        <div style="text-align:center">
-          HARİTA<br/>AVI
-          <div class="dash"></div>
+    <section class="hero">
+        <img src="logo.png" alt="Harita Avı Logo" class="hero-logo">
+        
+        <h1>Harita Avı</h1>
+        <p>TYT, AYT, KPSS ve benzeri sınavların hazırlıklarında haritalar artık sıkıcı değil! Şehirlerden dağlara, göllerden tarihi yerlere kadar her şeyi eğlenerek keşfedin.</p>
+        
+        <div class="download-container">
+            <div class="download-box">
+                <img src="googleplayqr.png" alt="Google Play QR" class="qr-img">
+                <a href="https://play.google.com/store/apps/details?id=com.burhan.kpss_cografya" class="btn-main">Google Play</a>
+            </div>
+
+            <div class="download-box">
+                <img src="appstoreqr.png" alt="App Store QR" class="qr-img">
+                <a href="https://burhancengiz.com/harita-avi/" class="btn-main" style="background: white; color: black;">App Store(YAKINDA)</a>
+            </div>
         </div>
-      </div>
-    </a>
+    </section>
 
-    <a class="card horiz" href="Harita Avi - Yatay.html">
-      <div class="label">16:9 · YATAY</div>
-      <div class="title">YOUTUBE · WEB · TV</div>
-      <div class="meta">1920 × 1080 · 30s</div>
-      <div class="preview">
-        <div style="text-align:center">
-          HARİTA AVI
-          <div class="dash"></div>
+    <!-- 🚀 REKLAM GÖMÜLEN ALAN BAŞLANGICI 🚀 -->
+    <div id="reklam-alani" style="width: 100%; max-width: 1000px; margin: 40px auto; padding: 0 20px;">
+        <h2 style="text-align: center; color: var(--primary); margin-bottom: 20px; font-size: 1.5em;">Uygulama Tanıtımı</h2>
+    </div>
+    <!-- 🚀 REKLAM GÖMÜLEN ALAN BİTİŞİ 🚀 -->
+
+    <section class="features">
+        <div class="card">
+            <i>🗺️</i>
+            <h3>Detaylı Atlas</h3>
+            <p>Türkiye'nin her köşesini kapsayan, en güncel verilerle hazırlanmış interaktif haritalar.</p>
         </div>
-      </div>
-    </a>
-  </div>
+        <div class="card">
+            <i>🎮</i>
+            <h3>Eğlenceli Modlar</h3>
+            <p>Zamana karşı yarışın veya kilitli bölümleri reklam izleyerek ücretsiz açın!</p>
+        </div>
+        <div class="card">
+            <i>📱</i>
+            <h3>Çevrimdışı Kullanım</h3>
+            <p>İnternetiniz olmasa bile harita bilginizi her yerde tazelemeye devam edin.</p>
+        </div>
+    </section>
 
-  <p style="margin-top:60px;color:#B8BFC6;font-size:15px;line-height:1.6">
-    Klavye: <b>Boşluk</b> oynat/duraklat · <b>← →</b> ileri/geri · <b>0</b> başa al
-  </p>
-</div>
+<footer>
+    <div class="contact-title">İletişim:</div>
+    <div class="social-links">
+        <a href="mailto:burhancengizbc@hotmail.com" title="E-Posta Gönder" class="mail">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.facebook.com/BurhanCengizBC/" target="_blank" title="Facebook" class="facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/burhancengizbc/" target="_blank" title="Instagram" class="instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@burhancengizbc" target="_blank" title="TikTok" class="tiktok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+    <div class="footer-text">
+        <p>JavaScript | burhancengiz.com</p>
+        <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
+        <a href="/privacy-policy.html">Gizlilik Politikası</a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var reklamAlani = document.getElementById('reklam-alani');
+        var iframe = document.createElement('iframe');
+        
+        if (window.innerWidth <= 768) {
+            // MOBİL GÖRÜNÜM
+            iframe.src = "Harita Avi - Dikey v3 (60s).html";
+            iframe.style.width = "100%";
+            iframe.style.maxWidth = "350px"; // Mobilde çok yayılmasın
+            iframe.style.height = "600px"; 
+        } else {
+            // PC / TABLET GÖRÜNÜM
+            iframe.src = "Harita Avi - Yatay v3 (60s).html";
+            iframe.style.width = "100%";
+            iframe.style.height = "500px"; 
+        }
+        
+        iframe.style.border = "none";
+        reklamAlani.appendChild(iframe);
+    });
+</script>
+
 </body>
 </html>
