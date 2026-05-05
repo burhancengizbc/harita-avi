@@ -157,6 +157,10 @@
         </div>
     </section>
 
+    <!-- 🚀 EKLENEN REKLAM ALANI BAŞLANGICI 🚀 -->
+    <div id="reklam-alani" style="width: 100%; text-align: center; margin-top: 20px;"></div>
+    <!-- 🚀 EKLENEN REKLAM ALANI BİTİŞİ 🚀 -->
+
     <section class="features">
         <div class="card">
             <i>🗺️</i>
@@ -197,6 +201,29 @@
         <a href="/privacy-policy.html">Gizlilik Politikası</a>
     </div>
 </footer>
+
+<!-- 🚀 EKLENEN REKLAM KONTROL SCRİPTİ BAŞLANGICI 🚀 -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var reklamAlani = document.getElementById('reklam-alani');
+        var iframe = document.createElement('iframe');
+        
+        // Ekran genişliğini kontrol ediyoruz (768px ve altı telefon kabul edilir)
+        if (window.innerWidth <= 768) {
+            iframe.src = "Harita Avi - Dikey v3 (60s).html";
+            iframe.style.width = "100%";
+            iframe.style.height = "800px"; // Dikey reklamın tahmini yüksekliği (Değiştirebilirsin)
+        } else {
+            iframe.src = "Harita Avi - Yatay v3 (60s).html";
+            iframe.style.width = "100%";
+            iframe.style.height = "600px"; // Yatay reklamın tahmini yüksekliği (Değiştirebilirsin)
+        }
+        
+        iframe.style.border = "none";
+        reklamAlani.appendChild(iframe);
+    });
+</script>
+<!-- 🚀 EKLENEN REKLAM KONTROL SCRİPTİ BİTİŞİ 🚀 -->
 
 </body>
 </html>
