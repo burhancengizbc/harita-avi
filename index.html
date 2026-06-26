@@ -122,16 +122,23 @@
 
         .footer-text p { margin: 8px 0; }
         
-        /* Linklerin Sabit Beyaz Kalması */
-        .footer-text a { 
-            color: var(--text-white) !important; 
+        /* Yasal Navigasyon */
+        .legal-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .legal-links a { 
+            color: var(--primary) !important; 
             text-decoration: none; 
             font-weight: 600; 
-            transition: opacity 0.3s;
+            transition: 0.3s;
         }
 
-        .footer-text a.privacy-link { opacity: 0.6; font-weight: 400; }
-        .footer-text a:hover { opacity: 1; text-decoration: underline !important; }
+        .legal-links a:hover { text-decoration: underline; color: white !important; }
 
         /* Reklam Iframe Stili */
         #reklam-alani iframe {
@@ -205,7 +212,14 @@
     <div class="footer-text">
         <p>JavaScript | burhancengiz.com</p>
         <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
-        <a href="https://burhancengiz.com/harita-avi/gizlilik" class="privacy-link">Gizlilik Politikası</a>
+        
+        <!-- Yasal Linkler -->
+        <div class="legal-links">
+            <a href="privacy-policy.html">Gizlilik Politikası</a>
+            <a href="eula.html">Kullanım Koşulları (EULA)</a>
+            <a href="destek.html">Destek</a>
+            <a href="tesekkurler.html">Teşekkürler</a>
+        </div>
     </div>
 </footer>
 
@@ -215,13 +229,11 @@
         var iframe = document.createElement('iframe');
         
         if (window.innerWidth <= 768) {
-            // MOBİL GÖRÜNÜM
             iframe.src = "Harita Avi - Dikey v3 (60s).html";
             iframe.style.width = "100%";
-            iframe.style.maxWidth = "350px"; // Mobilde çok yayılmasın
+            iframe.style.maxWidth = "350px"; 
             iframe.style.height = "600px"; 
         } else {
-            // PC / TABLET GÖRÜNÜM
             iframe.src = "Harita Avi - Yatay v3 (60s).html";
             iframe.style.width = "100%";
             iframe.style.height = "500px"; 
